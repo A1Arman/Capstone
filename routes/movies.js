@@ -5,7 +5,7 @@ const {
   createMovie,
   updateMovie,
   deleteMovie
-} = require('../server/controllers/movieController');
+} = require('../controllers/movieController');
 
 const router = express.Router();
 

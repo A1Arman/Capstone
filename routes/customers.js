@@ -5,7 +5,7 @@ const {
   createCustomer,
   updateCustomer,
   deleteCustomer
-} = require('../server/controllers/customerController');
+} = require('../controllers/customerController');
 
 const router = express.Router();
 

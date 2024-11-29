@@ -6,7 +6,7 @@ const {
   updateRental,
   deleteRental,
   returnRental
-} = require('../server/controllers/rentalController');
+} = require('../controllers/rentalController');
 
 const router = express.Router();
 

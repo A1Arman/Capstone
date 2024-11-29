@@ -5,7 +5,7 @@ const {
   createEmployee,
   updateEmployee,
   deleteEmployee
-} = require('../server/controllers/employeeController');
+} = require('../controllers/employeeController');
 
 const router = express.Router();
 
