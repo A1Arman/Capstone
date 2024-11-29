@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const bcrypt = require('bcryptjs');
-const sequelize = require('../../config/sequelize');
+const sequelize = require('../config/sequelize');
 const Customer = require('./customerModel');
 const Employee = require('./employeeModel');
 const phoneValidationRegex = '^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$'
