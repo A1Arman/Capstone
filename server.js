@@ -56,7 +56,7 @@ sequelize.sync({ force: false })  // 'force: true' will drop and re-create table
     console.error('Error syncing database:', err);
   });
 
-const PORT = process.env.HOST;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
