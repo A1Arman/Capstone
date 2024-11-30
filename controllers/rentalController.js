@@ -11,7 +11,7 @@ const getAllRentals = async (req, res) => {
     } else if (req.headers.userId) {
       userId = req.headers.userId
     }
-    console.log(userId)
+
     const user = await User.findByPk(userId)
     let rentals
     if (!user) {
@@ -83,7 +83,7 @@ const updateRental = async (req, res) => {
     if (!rental) return res.status(404).json({ message: 'Rental not found' });
 
     const { returnDate, paymentMethod } = req.body;
-    console.log(req.body)
+
     await rental.update({ return_date: returnDate, payment_method: paymentMethod });
     console.log(rental)
     res.json(rental);
