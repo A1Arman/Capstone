@@ -14,6 +14,9 @@ const getAllRentals = async (req, res) => {
     console.log(userId)
     const user = await User.findByPk(userId)
     let rentals
+    if (!user) {
+      throw new Error('No user found')
+    }
     if (user.role === 'employee') {
       // Find rentals that match the userId
       rentals = await Rental.findAll({
