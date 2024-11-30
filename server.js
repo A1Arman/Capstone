@@ -15,6 +15,7 @@ const employeeRoutes = require('./routes/employees');
 const movieRoutes = require('./routes/movies');
 const rentalRoutes = require('./routes/rentals');
 const authRoutes = require('./routes/auth');
+const healthRoute = require('./routes/health')
 
 const app = express();
 const sessionStore = new MySQLStore({}, db);
@@ -44,6 +45,7 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/movies', movieRoutes);
 app.use('/api/rentals', rentalRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/health', healthRoute)
 
 // Sync models with the database (create tables)
 sequelize.sync({ force: false })  // 'force: true' will drop and re-create tables; 'false' to prevent this in production
