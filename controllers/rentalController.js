@@ -11,6 +11,7 @@ const getAllRentals = async (req, res) => {
     } else if (req.headers.userId) {
       userId = req.headers.userId
     }
+    console.log(userId)
     const user = await User.findByPk(userId)
     let rentals
     if (user.role === 'employee') {
